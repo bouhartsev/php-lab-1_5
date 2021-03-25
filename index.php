@@ -18,8 +18,10 @@
         <?php 
             $table_class='';
             $div_class='';
-            if ($type=='table') $table_class=' menu_active';
-            else $div_class=' menu_active';
+            if (isset($_GET['type'])) {
+                if ($type=='table') $table_class=' menu_active';
+                else $div_class=' menu_active';
+            }
         ?>
         <a href="?<?= 'num='.$num ?>&type=table" class ="menu_item <?= $table_class ?>">Табличная верстка</a>
         <a href="?<?= 'num='.$num ?>&type=div" class = "menu_item <?= $div_class ?>">Блочная верстка</a>
@@ -39,7 +41,7 @@
                 ?>
         </div>
         <!-- основная часть страницы -->
-        <div class= "div_result">
+        <div class= "div_result" <?php if ($num!='all') echo 'style="font-size: 30px;"'; ?>>
             <?php 
                 if ($num=='all') {
                     for ($i=2; $i < 10; $i++){

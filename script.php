@@ -7,7 +7,7 @@
 
     function toLink($n) {
         global $type;
-        if ($n>=2 and $n<=9) return '<a href="?num='.$n.'&type='.$type.'" class="num_a">'.$n.'</a>';
+        if ($n>=2 and $n<=9) return '<a href="?num='.$n.'" class="num_a">'.$n.'</a>';
         else return $n;
     }
 
