@@ -28,6 +28,7 @@
     </header>
     <main>
         <!-- левая часть страницы -->
+        
 
         <div class="div_column">
 
